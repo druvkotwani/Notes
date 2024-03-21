@@ -47,3 +47,26 @@ class JSXDemo extends React.Component {
 In the above code, the JSX `<h1>This is JSX</h1>` is converted into `React.createElement("h1", null, "This is JSX")`
 
 However, starting with React 17, there is a new JSX transform that allows you to use JSX without importing React. This is possible thanks to the introduction of the new JSX transform, which modifies how JSX is transformed into JavaScript
+
+---
+
+Webpack is a JavaScript module bundler that is commonly used with React to bundle and manage dependencies. It takes all of the individual JavaScript files and other assets in a project, such as images and CSS, and combines them into a single bundle that can be loaded by the browser. Webpack also has the ability to transpile modern JavaScript code (such as ES6) into older versions that can be understood by older browsers [1].
+
+### How Does React Webpack Work?
+
+1. **Entry Point**: Webpack starts by identifying the entry point of your application. The entry point is specified in the Webpack configuration file, typically named `webpack.config.js`. This file tells Webpack where to start looking for the dependencies of your application [1].
+
+2. **Dependency Graph Creation**: From the entry point, Webpack starts traversing the application's code, following import and require statements to identify all of the dependencies that are required to run the application. These dependencies can be JavaScript files, CSS files, images, and more [1].
+
+3. **Processing with Loaders**: Once Webpack has identified all of the dependencies, it then processes them using loaders. Loaders are modules that can transform the code being bundled, such as transpiling from ES6 to ES5 or transforming JSX to JavaScript. Loaders are also specified in the Webpack configuration file [1].
+
+4. **Bundling**: After the loaders have finished processing the dependencies, Webpack then bundles them into a single file or a few files. The output location for the bundled files is also specified in the Webpack configuration file [1].
+
+5. **Serving and Loading**: The resulting bundle(s) can then be included in the HTML file, which is served to the browser and loaded by the browser. This allows for faster loading times and a more efficient overall application since the browser only needs to download a single file or a few files instead of many individual files [1].
+
+6. **Development Server**: Webpack also has a development server which is great for development environments, it allows you to see your changes instantly without the need to refresh the page [1].
+
+### Conclusion
+
+Webpack is a powerful tool that works closely with React to make building and maintaining large JavaScript applications easier by allowing developers to modularize their code, and bundle all of the application's dependencies into a single file that can be loaded by the browser for faster loading times and better performance [1].
+
